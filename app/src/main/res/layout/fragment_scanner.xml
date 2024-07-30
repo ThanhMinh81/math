@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ScannerFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerScanPage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:background="@drawable/bg_radius_nav"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+           <RadioGroup
+               android:id="@+id/rgScanner"
+               android:gravity="center"
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <RadioButton
+                   android:id="@+id/rbScan"
+                   android:paddingTop="5dp"
+                   android:paddingBottom="5dp"
+                   android:paddingRight="10dp"
+                   android:paddingLeft="10dp"
+                   android:background="@drawable/bg_radiobutton"
+                   android:drawableTint="@color/bottom_nav_item_color"
+                   android:textColor="@drawable/color_state"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:button="@null"
+                   android:text="@string/txt_scan"
+                   android:textSize="14sp"
+                   android:drawableTop="@drawable/ic_camera" />
+
+               <RadioButton
+                   android:id="@+id/rbDraw"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   android:background="@drawable/bg_radiobutton"
+                   android:button="@null"
+                   android:drawableTop="@drawable/ic_paint"
+                   android:drawableTint="@color/bottom_nav_item_color"
+                   android:paddingLeft="13dp"
+                   android:paddingTop="5dp"
+                   android:paddingRight="13dp"
+                   android:paddingBottom="5dp"
+                   android:text="@string/txt_draw"
+                   android:textColor="@drawable/color_state"
+                   android:textSize="14sp" />
+
+               <RadioButton
+                   android:id="@+id/rbKeyboa"
+                   android:paddingTop="7dp"
+                   android:paddingBottom="7dp"
+                   android:paddingRight="15dp"
+                   android:paddingLeft="15dp"
+                   android:background="@drawable/bg_radiobutton"
+                   android:drawableTint="@color/bottom_nav_item_color"
+                   android:textColor="@drawable/color_state"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:button="@null"
+                   android:text="@string/txt_keyboards"
+                   android:textSize="13sp"
+                   android:drawableTop="@drawable/ic_keyboard" />
+
+           </RadioGroup>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

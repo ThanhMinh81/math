@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/caculator_bottomnav"
+        android:icon="@drawable/ic_caculator"
+        android:title="@string/txt_caculator" />
+
+    <item
+        android:id="@+id/image_bottomnav"
+        android:icon="@drawable/ic_caculator"
+        android:title="@string/txt_image_bottomnav" />
+
+    <item
+        android:id="@+id/scanner_bottomnav"
+        android:icon="@drawable/ic_caculator"
+        android:title="@string/txt_scan" />
+
+    <item
+        android:id="@+id/pdf_bottomnav"
+        android:icon="@drawable/ic_caculator"
+        android:title="@string/txt_pdf_bottomnav" />
+
+    <item
+        android:id="@+id/tools_bottomnav"
+        android:icon="@drawable/ic_caculator"
+        android:title="@string/txt_tool_bottomnav" />
+
+</menu>
