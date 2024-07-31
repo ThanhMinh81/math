@@ -9,7 +9,7 @@ import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.matheasyapp.db.HistoryDatabase
-import com.example.matheasyapp.view.HistoryActivity
+import com.example.matheasyapp.view.calculate.HistoryActivity
 import com.example.matheasyapp.view.calculate.CaculatorFragment
 import com.example.matheasyapp.view.calculate.UnitConverFragment
 import com.example.matheasyapp.view.tool.ToolFragment

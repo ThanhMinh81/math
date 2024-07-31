@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.matheasyapp.databinding.FragmentToolBinding
+import com.example.matheasyapp.view.tipsscreen.TipsActivity
 import com.example.matheasyapp.view.tool.activity.BorrowActivity
 
 
@@ -27,6 +28,10 @@ class ToolFragment : Fragment() {
 
 
 
+        binding.layoutTips.setOnClickListener {
+            val intent = Intent(requireActivity(),TipsActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.layoutBorrowMoney.setOnClickListener {
              val intent = Intent(requireActivity(), BorrowActivity::class.java)

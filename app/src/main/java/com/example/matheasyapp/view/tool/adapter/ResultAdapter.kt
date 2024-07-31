@@ -1,17 +1,18 @@
 package com.example.matheasyapp.view.tool.adapter
 
 import android.content.Context
+import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.matheasyapp.R
 import com.example.matheasyapp.view.tool.model.LoanPayment
-import java.util.*
 
-class LoanAdapter(private val context: Context, private val loanPayments: List<LoanPayment?>) :
-    RecyclerView.Adapter<LoanAdapter.ViewHolder>() {
+class ResultAdapter(private val context: Context, private val loanPayments: List<LoanPayment?>) :
+    RecyclerView.Adapter<ResultAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_loan_payment, parent, false)
@@ -37,47 +38,48 @@ class LoanAdapter(private val context: Context, private val loanPayments: List<L
         private val viewLineBottom: View = itemView.findViewById(R.id.lineBottom)
 
 
-
         fun bind(loanPayment: LoanPayment, position: Int) {
-
-//            viewLineTop.visibility = View.GONE
-//            viewLineBottom.visibility = View.GONE
-
 
 
             if (position == 0) {
                 // first element
-                tvMonth.setText("N")
-                tvMonth.setTextColor(context.getColor(R.color.header_item))
-                tvPrincipal.setText("Vốn gốc")
-                tvPrincipal.setTextColor(context.getColor(R.color.header_item))
-
-                tvInterest.setText("Lãi suất")
-                tvInterest.setTextColor(context.getColor(R.color.header_item))
-
-                tvPayment.setText("Thanh toán")
-                tvPayment.setTextColor(context.getColor(R.color.header_item))
-
-                tvBalance.setText("Số dư")
-                tvBalance.setTextColor(context.getColor(R.color.header_item))
-
-//                viewLineTop.visibility = View.GONE
-
+                viewLineTop.visibility = View.GONE
                 viewLineBottom.visibility = View.VISIBLE
 
-            }
+                tvPrincipal.setTextColor(context.resources.getColor(R.color.header_item, null))
+                tvInterest.setTextColor(context.resources.getColor(R.color.header_item, null))
+                tvPayment.setTextColor(context.resources.getColor(R.color.header_item, null))
+                tvBalance.setTextColor(context.resources.getColor(R.color.header_item, null))
 
-            if (position == loanPayments.size - 1){
+            }
+//
+            if (position == loanPayments.size - 1) {
                 viewLineTop.visibility = View.VISIBLE
+                viewLineBottom.visibility = View.GONE
+
+                tvPrincipal.setTextColor(context.resources.getColor(R.color.black, null))
+                tvInterest.setTextColor(context.resources.getColor(R.color.black, null))
+                tvPayment.setTextColor(context.resources.getColor(R.color.black, null))
+                tvBalance.setTextColor(context.resources.getColor(R.color.black, null))
+
+//                // Tải font tùy chỉnh từ tài nguyên
+                val typeface = ResourcesCompat.getFont(context, R.font.montserratlight)
+//
+//                // Áp dụng font cho TextView
+//                textView.typeface = typeface
+
+                tvPrincipal.setTypeface(typeface, Typeface.BOLD)
+                tvInterest.setTypeface(typeface, Typeface.BOLD)
+                tvPayment.setTypeface(typeface, Typeface.BOLD)
+                tvBalance.setTypeface(typeface, Typeface.BOLD)
 
             }
-
 
             tvMonth.text = "${loanPayment.month}"
-            tvPrincipal.text =  loanPayment.principal.toString()
-            tvInterest.text =  loanPayment.interest.toString()
+            tvPrincipal.text = loanPayment.principal.toString()
+            tvInterest.text = loanPayment.interest.toString()
             tvPayment.text = loanPayment.payment.toString()
-            tvBalance.text =  loanPayment.balance.toString()
+            tvBalance.text = loanPayment.balance.toString()
         }
     }
 }

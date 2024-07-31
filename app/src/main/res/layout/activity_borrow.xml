@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:orientation="vertical"
-tools:context=".view.tool.activity.BorrowActivity">
+    tools:context=".view.tool.activity.BorrowActivity">
 
     <LinearLayout
         android:id="@+id/toolbar"
@@ -14,8 +14,6 @@ tools:context=".view.tool.activity.BorrowActivity">
         android:layout_height="70dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingTop="20dp"
-        android:paddingBottom="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -57,6 +55,8 @@ tools:context=".view.tool.activity.BorrowActivity">
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -72,7 +72,7 @@ tools:context=".view.tool.activity.BorrowActivity">
             android:fontFamily="@font/montserratlight"
             android:text="Phương thức thanh toán"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <Spinner
@@ -96,7 +96,7 @@ tools:context=".view.tool.activity.BorrowActivity">
                 android:fontFamily="@font/montserratlight"
                 android:text="Khoản vay gốc"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -114,7 +114,11 @@ tools:context=".view.tool.activity.BorrowActivity">
                     android:background="@drawable/bg_border_spinner"
                     android:padding="5dp">
 
-                    <TextView
+                    <EditText
+                        android:clickable="false"
+                        android:focusableInTouchMode="false"
+                        android:background="@null"
+                        android:cursorVisible="false"
                         android:id="@+id/tvPrincipalamount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -124,7 +128,7 @@ tools:context=".view.tool.activity.BorrowActivity">
                         android:hint="Vân vân : 10.000 "
                         android:maxLines="1"
                         android:textColor="@color/black"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -171,7 +175,7 @@ tools:context=".view.tool.activity.BorrowActivity">
                 android:fontFamily="@font/montserratlight"
                 android:text="Lãi suất(%)"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
 
@@ -184,7 +188,11 @@ tools:context=".view.tool.activity.BorrowActivity">
                 android:background="@drawable/bg_border_spinner"
                 android:padding="5dp">
 
-                <TextView
+                <EditText
+                    android:focusableInTouchMode="false"
+                    android:clickable="false"
+                    android:background="@null"
+                    android:cursorVisible="false"
                     android:id="@+id/tvInterest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -193,9 +201,8 @@ tools:context=".view.tool.activity.BorrowActivity">
                     android:fontFamily="@font/montserratlight"
                     android:hint="Vân vân : 9%"
                     android:maxLines="1"
-
                     android:textColor="@color/black"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -218,7 +225,7 @@ tools:context=".view.tool.activity.BorrowActivity">
                 android:fontFamily="@font/montserratlight"
                 android:text="Thời hạn vay"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -233,11 +240,15 @@ tools:context=".view.tool.activity.BorrowActivity">
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:background="@drawable/bg_border_spinner"
                     android:padding="5dp">
 
-                    <TextView
+                    <EditText
+                        android:focusableInTouchMode="false"
+                        android:clickable="false"
+                        android:background="@null"
+                        android:cursorVisible="false"
                         android:id="@+id/tvBarrow_time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -247,14 +258,15 @@ tools:context=".view.tool.activity.BorrowActivity">
                         android:hint="Vân vân : 10 "
                         android:maxLines="1"
                         android:textColor="@color/black"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <Spinner
@@ -283,7 +295,7 @@ tools:context=".view.tool.activity.BorrowActivity">
                 android:fontFamily="@font/montserratlight"
                 android:text="Thời hạn trả lãi"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -298,11 +310,15 @@ tools:context=".view.tool.activity.BorrowActivity">
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:background="@drawable/bg_border_spinner"
                     android:padding="5dp">
 
-                    <TextView
+                    <EditText
+                        android:clickable="false"
+                        android:focusableInTouchMode="false"
+                        android:background="@null"
+                        android:cursorVisible="false"
                         android:id="@+id/tvPay_interest"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -312,18 +328,19 @@ tools:context=".view.tool.activity.BorrowActivity">
                         android:hint="Vân vân : 10 "
                         android:maxLines="1"
                         android:textColor="@color/black"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <Spinner
-                        android:id="@+id/spinner_layout_pay_interest"
+                        android:id="@+id/spinner_pay_interest"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_border_spinner"

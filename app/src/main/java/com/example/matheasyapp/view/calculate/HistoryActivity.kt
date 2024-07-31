@@ -1,16 +1,11 @@
-package com.example.matheasyapp.view
+package com.example.matheasyapp.view.calculate
 
-import android.R
 import android.annotation.SuppressLint
-import android.content.DialogInterface
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
 import android.widget.CheckBox
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.matheasyapp.adapter.AdapterHistory
@@ -170,7 +165,7 @@ class HistoryActivity : AppCompatActivity(), HistoryItemClickListener, OnDeleteL
 
     private fun getData() {
         historyList.clear()
-        val list = database.Dao().allHistory
+        val list = database.historyDao().allHistory
         historyList.addAll(list)
         adapterHistory.notifyDataSetChanged()
     }

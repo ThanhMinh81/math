@@ -545,7 +545,7 @@ class CaculatorFragment : Fragment(), BottomSheftStateCaculator.callBackFunction
 
         lifecycleScope.launch {
             var history = History(result, calculation)
-            val newId = database.Dao().insert(history)
+            val newId = database.historyDao().insert(history)
 
 
             // Kiểm tra xem insert có thành công hay không

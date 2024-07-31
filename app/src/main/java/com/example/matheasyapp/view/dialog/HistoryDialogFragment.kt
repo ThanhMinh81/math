@@ -78,7 +78,7 @@ class HistoryDialogFragment : DialogFragment() {
         btnDele.setOnClickListener {
 
             val list: List<History> =  liveData.getValueList().toList()
-            database.Dao().deleteHistories(list)
+            database.historyDao().deleteHistories(list)
             listener.onDelete()
 
             alertDialog.dismiss()

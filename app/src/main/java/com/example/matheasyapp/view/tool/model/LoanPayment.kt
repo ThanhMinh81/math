@@ -2,14 +2,16 @@ package com.example.matheasyapp.view.tool.model
 
 import android.os.Parcel
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
 
 class LoanPayment(
     var month: String,
     var principal: String,
     var interest: String,
     var payment: String,
-    var balance: String
-) : Parcelable {
+    var balance: String, ) : Parcelable {
 
 
     constructor(parcel: Parcel) : this(
@@ -17,7 +19,7 @@ class LoanPayment(
         parcel.readString().toString(),
         parcel.readString().toString(),
         parcel.readString().toString(),
-        parcel.readString().toString()
+        parcel.readString().toString(),
     ) {
     }
 
@@ -46,5 +48,6 @@ class LoanPayment(
             return arrayOfNulls(size)
         }
     }
+
 
 }

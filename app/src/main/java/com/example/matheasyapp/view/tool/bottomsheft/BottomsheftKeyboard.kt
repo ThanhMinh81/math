@@ -60,6 +60,29 @@ class BottomsheftKeyboard : BottomSheetDialogFragment() {
             viewModel.setInterestValue("")
         } else if (keyKeyboard.equals("payinterest")) {
             viewModel.setPayInterestValue("")
+        } else if (keyKeyboard.equals("money_bill")) {
+            viewModel.setValueMoneyBill("")
+        } else if (keyKeyboard.equals("person_amount")) {
+
+
+            viewModel.setValueAmountPerson("")
+
+        } else if (keyKeyboard.equals("money_give")) {
+
+            viewModel.setValueAmountMoneyGive("")
+
+        } else if (keyKeyboard.equals("percent_give")) {
+
+            viewModel.setValuePercentMoneyGive("")
+
+        } else if (keyKeyboard.equals("money_scot")) {
+
+            viewModel.setValueAmountScot("")
+
+        } else if (keyKeyboard.equals("percent_vat")) {
+
+            viewModel.setValueAmountVAT("")
+
         }
     }
 
@@ -77,7 +100,39 @@ class BottomsheftKeyboard : BottomSheetDialogFragment() {
         } else if (keyKeyboard.equals("payinterest")) {
             val currentText = viewModel.getPayInterestValue().value ?: ""
             viewModel.setPayInterestValue(currentText + number)
+        } else if (keyKeyboard.equals("money_bill")) {
+            val currentText = viewModel.getValueMoneyBill().value ?: ""
+            viewModel.setValueMoneyBill(currentText + number)
+        } else if (keyKeyboard.equals("person_amount")) {
+            val currentText = viewModel.getValueAmountPerson().value ?: ""
+
+            viewModel.setValueAmountPerson(currentText + number)
+
+        } else if (keyKeyboard.equals("money_give")) {
+            val currentText = viewModel.getValueAmountMoneyGive().value ?: ""
+
+
+            viewModel.setValueAmountMoneyGive(currentText + number)
+
+        } else if (keyKeyboard.equals("percent_give")) {
+            val currentText = viewModel.getValuePercentMoneyGive().value ?: ""
+
+
+            viewModel.setValuePercentMoneyGive(currentText + number)
+
+        } else if (keyKeyboard.equals("money_scot")) {
+            val currentText = viewModel.getValueAmountScot().value ?: ""
+
+
+            viewModel.setValueAmountScot(currentText + number)
+
+        } else if (keyKeyboard.equals("percent_vat")) {
+            val currentText = viewModel.getValueAmountVAT().value ?: ""
+
+            viewModel.setValueAmountVAT(currentText + number)
+
         }
+
     }
 
     fun onClearClick() {
@@ -113,6 +168,42 @@ class BottomsheftKeyboard : BottomSheetDialogFragment() {
 
             if (currentText.isNotEmpty()) {
                 viewModel.setPayInterestValue(currentText.substring(0, currentText.length - 1))
+            }
+        } else if (keyKeyboard.equals("money_bill")) {
+            val currentText = viewModel.getValueMoneyBill().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValueMoneyBill(currentText.substring(0, currentText.length - 1))
+            }
+        } else if (keyKeyboard.equals("person_amount")) {
+            val currentText = viewModel.getValueAmountPerson().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValueAmountPerson(currentText.substring(0, currentText.length - 1))
+            }
+        } else if (keyKeyboard.equals("money_give")) {
+            val currentText = viewModel.getValueAmountMoneyGive().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValueAmountMoneyGive(currentText.substring(0, currentText.length - 1))
+            }
+        } else if (keyKeyboard.equals("percent_give")) {
+            val currentText = viewModel.getValuePercentMoneyGive().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValuePercentMoneyGive(currentText.substring(0, currentText.length - 1))
+            }
+        } else if (keyKeyboard.equals("money_scot")) {
+            val currentText = viewModel.getValueAmountScot().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValueAmountScot(currentText.substring(0, currentText.length - 1))
+            }
+        } else if (keyKeyboard.equals("percent_vat")) {
+            val currentText = viewModel.getValueAmountVAT().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValueAmountVAT(currentText.substring(0, currentText.length - 1))
             }
         }
 

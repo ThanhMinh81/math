@@ -11,7 +11,7 @@
         android:id="@+id/lineTop"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:backgroundTint="#636e72" />
+        android:background="#636e72" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -107,6 +107,6 @@
         android:id="@+id/lineBottom"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:backgroundTint="#636e72" />
+        android:background="#636e72" />
 
 </LinearLayout>
