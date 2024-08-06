@@ -8,13 +8,16 @@ import com.example.matheasyapp.view.calculate.CalculateFragment
 import com.example.matheasyapp.view.calculate.MoneyConverFragment
 import com.example.matheasyapp.view.calculate.UnitConverFragment
 import com.example.matheasyapp.view.calculate.fragmentUnit.LengthUnitFragment
+import com.example.matheasyapp.view.calculate.fragmentUnit.SquareUnitFragment
+import com.example.matheasyapp.view.calculate.fragmentUnit.TimeUnitFragment
+import com.example.matheasyapp.view.calculate.fragmentUnit.VolumeUnitFragment
 import com.example.matheasyapp.view.calculate.fragmentUnit.WeightUnitFragment
 
 class AdapterBottomUnit(fm: FragmentManager, var totalItem: Int) : FragmentPagerAdapter(fm) {
 
 
     override fun getCount(): Int {
-        return 2
+        return 5
     }
 
 
@@ -27,6 +30,16 @@ class AdapterBottomUnit(fm: FragmentManager, var totalItem: Int) : FragmentPager
 
             1 -> {
                 return LengthUnitFragment()
+            }
+            2 -> {
+                return  SquareUnitFragment()
+            }
+
+            3 -> {
+                return  VolumeUnitFragment()
+            }
+            4 -> {
+                return  TimeUnitFragment()
             }
 
             else -> {

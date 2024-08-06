@@ -230,7 +230,7 @@ class CaculatorFragment : Fragment(), BottomSheftStateCaculator.callBackFunction
 
             }
 
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            override fun onTextChanged(s: CharSequence?,start: Int, before: Int, count: Int) {
 
 //                println("iiiwiuiwu ${s.toString()}")
 //                println("checck ${isExponentGreaterThanOrEqualTo419(s.toString())}")
@@ -246,7 +246,7 @@ class CaculatorFragment : Fragment(), BottomSheftStateCaculator.callBackFunction
                 updateResultDisplay()
                 textSizeAdjuster.adjustTextSize(
                     binding.tvInput,
-                    TextSizeAdjuster.AdjustableTextType.Input
+                    TextSizeAdjuster.AdjustableTextType.Input,50
                 )
 
             }

@@ -18,6 +18,16 @@
         android:theme="@style/Theme.MathEasyApp"
         tools:targetApi="31">
         <activity
+            android:name=".view.tool.activity.SaveMoneyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.tool.activity.CostMaterialActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MathEasyApp" />
+        <activity
+            android:name=".view.tool.activity.TaxMoneyActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.tipsscreen.TipsActivity"
             android:exported="false" />
         <activity

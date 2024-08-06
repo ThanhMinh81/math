@@ -32,11 +32,14 @@ class BottomSheftUnitFromConver : BottomSheetDialogFragment() {
 
         binding = BottomsheftUnitconverBinding.inflate(inflater, container, false)
 
-        binding.viewPager2.adapter = AdapterBottomUnit(childFragmentManager, 2)
+        binding.viewPager2.adapter = AdapterBottomUnit(childFragmentManager, 3)
         binding.viewPager2.currentItem = 0
 
-        binding.tablayout.addTab(binding.tablayout.newTab().setText("Tab1"))
-        binding.tablayout.addTab(binding.tablayout.newTab().setText("Tab2"))
+        binding.tablayout.addTab(binding.tablayout.newTab().setText("Weight"))
+        binding.tablayout.addTab(binding.tablayout.newTab().setText("Lenght"))
+        binding.tablayout.addTab(binding.tablayout.newTab().setText("Square"))
+        binding.tablayout.addTab(binding.tablayout.newTab().setText("Volume"))
+        binding.tablayout.addTab(binding.tablayout.newTab().setText("Time"))
 
         binding.tablayout.getTabAt(0)!!.select()
 

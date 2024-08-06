@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
     android:orientation="vertical"
     android:padding="7dp"
     tools:context=".view.calculate.UnitConverFragment">
@@ -157,32 +159,38 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:background="@null"
+                    android:clickable="false"
                     android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
                     android:textColor="@color/black"
-                    android:textSize="22sp" />
+                    android:textDirection="firstStrongLtr" />
 
             </HorizontalScrollView>
 
             <HorizontalScrollView
+                android:textDirection="rtl"
                 android:id="@+id/innn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="end"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:layout_gravity="end"
                 android:scrollbars="horizontal">
 
-                <EditText
-                    android:id="@+id/toValue"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:background="@null"
-                    android:cursorVisible="false"
-                    android:text="9"
-                    android:textColor="@color/black"
-                    android:textSize="22sp" />
-
+                  <EditText
+                      android:id="@+id/toValue"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="end"
+                      android:background="@null"
+                      android:clickable="false"
+                      android:cursorVisible="false"
+                      android:focusable="false"
+                      android:focusableInTouchMode="false"
+                      android:gravity="end"
+                      android:textColor="@color/black"
+                      android:textDirection="firstStrongRtl" />
             </HorizontalScrollView>
         </LinearLayout>
     </LinearLayout>

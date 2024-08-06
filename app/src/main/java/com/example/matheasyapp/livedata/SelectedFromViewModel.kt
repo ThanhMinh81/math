@@ -13,19 +13,19 @@ class SelectedFromViewModel : ViewModel() {
 
     private  val  setOnClickCloseBottomTo = MutableLiveData<String>()
 
-    fun getOnClickBottomTo() : MutableLiveData<String> {
+    fun getOnClickCloseDialogTo() : MutableLiveData<String> {
         return this.setOnClickCloseBottomTo
     }
 
-    fun setOnClickBottomTo(value : String) {
+    fun setOnClickCloseDialogTo(value : String) {
         this.setOnClickCloseBottomTo.value = value
     }
 
-    fun getSelectedOnClick() : MutableLiveData<String>{
+    fun getSelectedCloseDialogTo() : MutableLiveData<String>{
         return this.selectedOnClick
     }
 
-    fun setSelectedOnClick(value : String) {
+    fun setSelectedCloseDialogTo(value : String) {
         this.selectedOnClick.value = value
     }
 

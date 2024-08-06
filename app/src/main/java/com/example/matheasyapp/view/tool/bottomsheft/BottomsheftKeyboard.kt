@@ -80,9 +80,26 @@ class BottomsheftKeyboard : BottomSheetDialogFragment() {
             viewModel.setValueAmountScot("")
 
         } else if (keyKeyboard.equals("percent_vat")) {
-
             viewModel.setValueAmountVAT("")
-
+        } else if (keyKeyboard.equals("value_tax")) {
+            viewModel.setValueTax("")
+        } else if (keyKeyboard.equals("value_cost")) {
+            viewModel.setValueCost("")
+        } else if (keyKeyboard.equals("value_distance")) {
+            viewModel.setValueDistance("")
+        } else if (keyKeyboard.equals("value_material")) {
+            viewModel.setValueMaterial("")
+        } else if (keyKeyboard.equals("value_gas")) {
+            viewModel.setValueGas("")
+        }
+        else if (keyKeyboard.equals("money_level_save")) {
+            viewModel.setValueMoneyLevel("")
+        } else if (keyKeyboard.equals("interest_save")) {
+            viewModel.setInterestValue("")
+        } else if (keyKeyboard.equals("value_money_bill_save")) {
+            viewModel.setValueMoneyBillSave("")
+        } else if (keyKeyboard.equals("value_tax_interest")) {
+            viewModel.setValueTaxInterest("")
         }
     }
 
@@ -128,9 +145,38 @@ class BottomsheftKeyboard : BottomSheetDialogFragment() {
 
         } else if (keyKeyboard.equals("percent_vat")) {
             val currentText = viewModel.getValueAmountVAT().value ?: ""
-
             viewModel.setValueAmountVAT(currentText + number)
+        } else if (keyKeyboard.equals("value_tax")) {
+            val currentText = viewModel.getValueTaxt().value ?: ""
+            viewModel.setValueTax(currentText + number)
+        } else if (keyKeyboard.equals("value_cost")) {
+            val currentText = viewModel.getValueCost().value ?: ""
+            viewModel.setValueCost(currentText + number)
+        } else if (keyKeyboard.equals("value_distance")) {
+            val currentText = viewModel.getValueDistance().value ?: ""
+            viewModel.setValueDistance(currentText + number)
+        } else if (keyKeyboard.equals("value_material")) {
+            val currentText = viewModel.getValueMaterial().value ?: ""
+            viewModel.setValueMaterial(currentText + number)
+        } else if (keyKeyboard.equals("value_gas")) {
+            val currentText = viewModel.getValueGas().value ?: ""
+            viewModel.setValueGas(currentText + number)
+        }   else if (keyKeyboard.equals("money_level_save")) {
+            val currentText = viewModel.getValueMoneyLevel().value ?: ""
 
+            viewModel.setValueMoneyLevel(currentText + number)
+        } else if (keyKeyboard.equals("interest_save")) {
+            val currentText = viewModel.getInterestValue().value ?: ""
+
+            viewModel.setInterestValue(currentText + number)
+        } else if (keyKeyboard.equals("value_money_bill_save")) {
+            val currentText = viewModel.getValueMoneyBillSave().value ?: ""
+
+            viewModel.setValueMoneyBillSave(currentText + number)
+        } else if (keyKeyboard.equals("value_tax_interest")) {
+            val currentText = viewModel.getValueTaxInterest().value ?: ""
+
+            viewModel.setValueTaxInterest(currentText + number)
         }
 
     }
@@ -205,6 +251,71 @@ class BottomsheftKeyboard : BottomSheetDialogFragment() {
             if (currentText.isNotEmpty()) {
                 viewModel.setValueAmountVAT(currentText.substring(0, currentText.length - 1))
             }
+        } else if (keyKeyboard.equals("value_tax")) {
+            val currentText = viewModel.getValueTaxt().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValueTax(currentText.substring(0, currentText.length - 1))
+            }
+        } else if (keyKeyboard.equals("value_cost")) {
+            val currentText = viewModel.getValueCost().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValueCost(currentText.substring(0, currentText.length - 1))
+            }
+        } else if (keyKeyboard.equals("value_distance")) {
+
+            val currentText = viewModel.getValueDistance().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValueDistance(currentText.substring(0, currentText.length - 1))
+            }
+
+        } else if (keyKeyboard.equals("value_material")) {
+
+            val currentText = viewModel.getValueMaterial().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValueMaterial(currentText.substring(0, currentText.length - 1))
+            }
+
+        } else if (keyKeyboard.equals("value_gas")) {
+
+            val currentText = viewModel.getValueGas().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValueGas(currentText.substring(0, currentText.length - 1))
+            }
+        }  else if (keyKeyboard.equals("money_level_save")) {
+            val currentText = viewModel.getValueMoneyLevel().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValueMoneyLevel(currentText.substring(0, currentText.length - 1))
+            }
+        } else if (keyKeyboard.equals("interest_save")) {
+
+            val currentText = viewModel.getInterestValue().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setInterestValue(currentText.substring(0, currentText.length - 1))
+            }
+
+        } else if (keyKeyboard.equals("value_money_bill_save")) {
+
+            val currentText = viewModel.getValueMoneyBillSave().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValueMoneyBillSave(currentText.substring(0, currentText.length - 1))
+            }
+
+        } else if (keyKeyboard.equals("value_tax_interest")) {
+
+            val currentText = viewModel.getValueTaxInterest().value ?: ""
+
+            if (currentText.isNotEmpty()) {
+                viewModel.setValueTaxInterest(currentText.substring(0, currentText.length - 1))
+            }
+
         }
 
 

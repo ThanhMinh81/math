@@ -2,6 +2,7 @@ package com.example.matheasyapp.view.calculate.fragmentUnit
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -50,7 +51,7 @@ class LengthUnitFragment : Fragment() , OnClickItemConver {
         binding = FragmentLengthUnitBinding.inflate(inflater, container, false)
         listData = ArrayList<Convert>();
         initData();
-        println("kiemtradulieu ${listData.size}")
+
         adapterConvert = AdapterItemConver(listData,this,requireActivity())
 
         selectedFromViewModel = ViewModelProvider(requireActivity()).get(SelectedFromViewModel::class.java)
@@ -86,6 +87,8 @@ class LengthUnitFragment : Fragment() , OnClickItemConver {
 
 
     override fun onClick(item: Convert) {
+
+
 
         sharedPreferencesHelper.saveValueTo("from",item.symbol.toString())
         sharedPreferencesHelper.saveValueTo("typeFrom",item.type.toString())

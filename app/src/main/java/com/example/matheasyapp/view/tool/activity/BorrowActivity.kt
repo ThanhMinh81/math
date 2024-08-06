@@ -44,11 +44,11 @@ class BorrowActivity : AppCompatActivity() {
 
     private val REQUEST_CODE: Int = 1
 
-    lateinit var list  : ArrayList<LoanPayment> ;
+    lateinit var list: ArrayList<LoanPayment>;
 
     private lateinit var database: HistoryDatabase
 
-    private var loanHistoryUpdate : LoanHistory? = null
+    private var loanHistoryUpdate: LoanHistory? = null
 
 
     private val activityResultLauncher = registerForActivityResult(
@@ -65,14 +65,9 @@ class BorrowActivity : AppCompatActivity() {
                     data.getParcelableExtra("object")
                 }
 
-                // Kiểm tra loanHistory không phải là null trước khi sử dụng
-//                if (loanHistoryUpdate != null) {
-//                    Log.d("LoanHistory", loanHistoryUpdate.paymentMethods.toString())
-//                }
             }
         }
     }
-
 
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
@@ -103,7 +98,6 @@ class BorrowActivity : AppCompatActivity() {
         viewModelKeyBoard.getPayInterestValue().observe(this, Observer { newValue ->
             binding.tvPayInterest.setText(newValue)
         })
-
 
 
         // Đặt OnItemSelectedListener cho Spinner
@@ -139,54 +133,10 @@ class BorrowActivity : AppCompatActivity() {
 
         binding.btnCancle.setOnClickListener {
 
-//            val principal = 15000.0
-//            val annualInterestRate = 100.0
-//
-//            // Example 1: Loan term and payment interval in months
-//            val loanTermMonths = 3
-//
-//            // Example 2: Loan term in years and payment interval in years
-//            val loanTermYears = 1
-//
-//            val paymentScheduleMonths = calculateLoanPaymentsFull(
-//                principal,
-//                annualInterestRate,
-//                loanTermMonths,
-//                "months",
-//                "months"
-//            )
-//            val paymentScheduleYears = calculateLoanPaymentsFull(
-//                principal,
-//                annualInterestRate,
-//                loanTermYears,
-//                "years",
-//                "years"
-//            )
-//
-//            println("Payment Schedule for Loan Term in Months:")
-//            for (payment in paymentScheduleMonths) {
-//                println("Month ${payment.month}: Principal Payment ${payment.principal}, Interest Payment ${payment.interest}, Total Payment ${payment.payment}, Remaining Principal ${payment.balance}")
-//            }
-//
-//            println("\nPayment Schedule for Loan Term in Years:")
-//            for (payment in paymentScheduleYears) {
-//                println("Month ${payment.month}: Principal Payment ${payment.principal}, Interest Payment ${payment.interest}, Total Payment ${payment.payment}, Remaining Principal ${payment.balance}")
-//            }
 
         }
 
         binding.btnResult.setOnClickListener {
-
-
-//            val loanHistory  = LoanHistory(0,
-//                      binding.spMethodPayment.selectedItem.toString(),
-//                      binding.tvPrincipalamount.text.toString(),
-//                binding.tvInterest.text.toString(),
-//                binding.tvBarrowTime.text.toString(),
-//                binding.spinnerBorrowTime.selectedItem.toString(),
-//                binding.tvPayInterest.text.toString(),
-//                binding.spinnerPayInterest.selectedItem.toString(),
-//                )
 
             if (binding.spMethodPayment.selectedItem.toString()
                     .equals("Tổng số tiền thanh toán bằng nhau")
@@ -213,11 +163,11 @@ class BorrowActivity : AppCompatActivity() {
 
                 list.addAll(paymentSchedule)
 
-                val loanPayment : LoanHistory =  addHistory()
+                val loanPayment: LoanHistory = addHistory()
 
                 val intent = Intent(this, ResultActivity::class.java)
                 intent.putParcelableArrayListExtra("list", list)
-                intent.putExtra("object",loanPayment)
+                intent.putExtra("object", loanPayment)
 
                 activityResultLauncher.launch(intent);
 
@@ -227,10 +177,12 @@ class BorrowActivity : AppCompatActivity() {
 
             } else {
                 // thời hạn cho vay tính bằng tháng or năm
-                val termType: String = if (binding.spinnerBorrowTime.selectedItem.equals("Năm")) "years" else "months"
+                val termType: String =
+                    if (binding.spinnerBorrowTime.selectedItem.equals("Năm")) "years" else "months"
 
                 // thời hạn trả lãi tính bằng tháng or năm
-                val intervalType: String = if (binding.spinnerPayInterest.selectedItem.equals("Năm")) "years" else "months"
+                val intervalType: String =
+                    if (binding.spinnerPayInterest.selectedItem.equals("Năm")) "years" else "months"
 
 
                 val paymentSchedule = calculateLoanPaymentsFull(
@@ -241,8 +193,19 @@ class BorrowActivity : AppCompatActivity() {
                     intervalType
                 )
 
-                list.clear()
+                list.add(LoanPayment("N", "Vốn gốc", "Lãi suất", "Thanh toán", " Số dư "))
 
+                list.addAll(paymentSchedule)
+
+                val loanPayment: LoanHistory = addHistory()
+
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putParcelableArrayListExtra("list", list)
+                intent.putExtra("object", loanPayment)
+
+                activityResultLauncher.launch(intent);
+
+                list.clear()
 
 
             }
@@ -323,21 +286,24 @@ class BorrowActivity : AppCompatActivity() {
 
 
 
-        if(loanHistoryUpdate != null){
+        if (loanHistoryUpdate != null) {
 
-            val indexPayment = spinnerItems.indexOfFirst { it -> it.equals(loanHistoryUpdate!!.paymentMethods.toString()) }
+            val indexPayment =
+                spinnerItems.indexOfFirst { it -> it.equals(loanHistoryUpdate!!.paymentMethods.toString()) }
             binding.spMethodPayment.setSelection(indexPayment)
 
             binding.tvPrincipalamount.setText(loanHistoryUpdate!!.borrowPrincipal)
             binding.tvInterest.setText(loanHistoryUpdate!!.interest)
             binding.tvBarrowTime.setText(loanHistoryUpdate!!.borrow)
 
-            val indexBorrowTime = spinnerBorrowTime.indexOfFirst { it -> it.equals(loanHistoryUpdate!!.borrowTime) }
+            val indexBorrowTime =
+                spinnerBorrowTime.indexOfFirst { it -> it.equals(loanHistoryUpdate!!.borrowTime) }
             binding.spinnerBorrowTime.setSelection(indexBorrowTime)
 
             binding.tvPayInterest.setText(loanHistoryUpdate!!.interestTime)
 
-            val indexInterestTime = spinnerBorrowTime.indexOfFirst { it -> it.equals(loanHistoryUpdate!!.interestTime) }
+            val indexInterestTime =
+                spinnerBorrowTime.indexOfFirst { it -> it.equals(loanHistoryUpdate!!.interestTime) }
             binding.spinnerPayInterest.setSelection(indexInterestTime)
 
 
@@ -346,27 +312,6 @@ class BorrowActivity : AppCompatActivity() {
 
     }
 
-//    fun checkInputCorrect(){
-//        binding.tvPrincipalamount.addTextChangedListener(ThousandSeparatorTextWatcher(binding.tvPrincipalamount))
-//        binding.tvInterest.addTextChangedListener(MaxValueTextWatcher(binding.tvInterest, 100))
-//        if (valueSpBorrow.toString().trim().equals("Năm")) {
-//            binding.tvBarrowTime.addTextChangedListener(MaxValueTextWatcher(binding.tvBarrowTime, 50))
-//        } else if(valueSpBorrow.toString().trim().equals("Tháng")) {
-//            println("4352952345235")
-//            binding.tvBarrowTime.addTextChangedListener(MaxValueTextWatcher(binding.tvBarrowTime, 600))
-//        }
-//        if (valueSpPay.equals("Năm")) {
-//            binding.tvPayInterest.addTextChangedListener(MaxValueTextWatcher(binding.tvPayInterest, 50)
-//            )
-//        } else {
-//            binding.tvPayInterest.addTextChangedListener(MaxValueTextWatcher(binding.tvPayInterest, 600)
-//            )
-//        }
-//
-//        if (!selectedMode.equals("equals")) { binding.tvPayInterest.addTextChangedListener(MaxValueTextWatcher(binding.tvPayInterest, binding.tvBarrowTime.text.toString().toInt()))
-//
-//        }
-//    }
 
     fun calculateLoanSumEquals(
         principal: Double,
@@ -424,24 +369,23 @@ class BorrowActivity : AppCompatActivity() {
                 df.format(param2).toString(),
                 df.format(param3).toString(),
                 "0",
-                )
+            )
         )
 
         return payments
     }
 
 
-    private fun addHistory() : LoanHistory {
+    private fun addHistory(): LoanHistory {
 
-//        val paymentSum =
 
-        val loanPayment : LoanPayment = list.last()
+        val loanPayment: LoanPayment = list.last()
 
         val loanHistory: LoanHistory = LoanHistory(
             0,
             binding.spMethodPayment.selectedItem.toString(),
             binding.tvPrincipalamount.text.toString(),
-             loanPayment.interest,
+            loanPayment.interest,
             binding.tvBarrowTime.text.toString(),
             binding.spinnerBorrowTime.selectedItem.toString(),
             binding.tvPayInterest.text.toString(),
@@ -529,15 +473,7 @@ class BorrowActivity : AppCompatActivity() {
             totalInterest += interestPayment
             totalPayment += totalMonthlyPayment
 
-            val loanPayment = LoanPayment(
-
-                month = "$month",
-                principal = df.format(principalPayment).toString(),
-                interest = df.format(interestPayment).toString(),
-                payment = df.format(totalMonthlyPayment).toString(),
-                balance = df.format(remainingPrincipal).toString(),
-
-                )
+            val loanPayment = LoanPayment(month = "$month", principal = df.format(principalPayment).toString(), interest = df.format(interestPayment).toString(), payment = df.format(totalMonthlyPayment).toString(), balance = df.format(remainingPrincipal).toString(),)
 
             loanPayments.add(loanPayment)
 
@@ -561,13 +497,6 @@ class BorrowActivity : AppCompatActivity() {
         return loanPayments
     }
 
-    data class Payment(
-        val period: String,
-        val principalPayment: String,
-        val interestPayment: String,
-        val totalPayment: String,
-        val remainingPrincipal: String
-    )
 
 
 }

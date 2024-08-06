@@ -19,6 +19,101 @@ class KeyboardViewModel : ViewModel() {
     private var valueAmountScot = MutableLiveData<String>()
     private var valueAmountVAT = MutableLiveData<String>()
 
+    // cost
+
+    private var  valueTax = MutableLiveData<String>()
+    private var valueCost = MutableLiveData<String>()
+
+
+    // material
+    private var valueDistance  = MutableLiveData<String>()
+    private var valueMaterial = MutableLiveData<String>()
+    private var valueGas = MutableLiveData<String>()
+
+
+    // save money
+    private var valueMoneyLevel = MutableLiveData<String>()
+    private  var  valueInterestSave= MutableLiveData<String>()
+    private var valueMoneyBillSave = MutableLiveData<String>()
+    private  var  valueTaxInterest = MutableLiveData<String>()
+
+
+    // Getter và Setter cho valueMoneyLevel
+    fun setValueMoneyLevel(value: String) {
+        this.valueMoneyLevel.value = value
+    }
+
+    fun getValueMoneyLevel(): MutableLiveData<String> {
+        return valueMoneyLevel
+    }
+
+    // Getter và Setter cho valueInterestSave
+//    fun setValueInterestSave(value: String) {
+//        this.valueInterestSave.value = value
+//    }
+
+//    fun getValueInterestSave(): MutableLiveData<String> {
+//        return valueInterestSave
+//    }
+
+    // Getter và Setter cho valueMoneyBillSave
+    fun setValueMoneyBillSave(value: String) {
+        this.valueMoneyBillSave.value = value
+    }
+
+    fun getValueMoneyBillSave(): MutableLiveData<String> {
+        return valueMoneyBillSave
+    }
+
+    // Getter và Setter cho valueTaxInterest
+    fun setValueTaxInterest(value: String) {
+        this.valueTaxInterest.value = value
+    }
+
+    fun getValueTaxInterest(): MutableLiveData<String> {
+        return valueTaxInterest
+    }
+
+
+    fun setValueDistance(value : String){
+        this.valueDistance.value = value
+    }
+    fun getValueDistance() : MutableLiveData<String>{
+        return valueDistance
+    }
+
+    fun setValueMaterial(value: String){
+        this.valueMaterial.value = value
+    }
+
+    fun getValueMaterial() : MutableLiveData<String>{
+        return  valueMaterial
+    }
+
+    fun setValueGas(value: String){
+        this.valueGas.value = value
+    }
+
+    fun getValueGas() : MutableLiveData<String>{
+        return  valueGas
+    }
+
+
+    fun setValueCost(value : String){
+        this.valueCost.value = value
+    }
+    fun getValueCost() : MutableLiveData<String>{
+        return valueCost
+    }
+
+    fun setValueTax(value : String){
+        this.valueTax.value = value
+    }
+    fun getValueTaxt() : MutableLiveData<String>{
+        return valueTax
+    }
+
+
     fun setKeyArgumentValue(value: String) {
         this.keyArguments.value = value
     }

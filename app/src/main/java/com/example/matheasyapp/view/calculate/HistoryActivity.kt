@@ -219,6 +219,7 @@ class HistoryActivity : AppCompatActivity(), HistoryItemClickListener, OnDeleteL
 
     }
 
+
     //  dialog callback
     override fun onDelete() {
         getData()

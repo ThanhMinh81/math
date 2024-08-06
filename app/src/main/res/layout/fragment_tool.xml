@@ -240,6 +240,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/layout_tax_money"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -291,6 +292,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/layout_cost_material"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -336,6 +338,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/layout_save_money"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"

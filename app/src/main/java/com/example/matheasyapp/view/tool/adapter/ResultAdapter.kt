@@ -2,6 +2,7 @@ package com.example.matheasyapp.view.tool.adapter
 
 import android.content.Context
 import android.graphics.Typeface
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,6 +41,9 @@ class ResultAdapter(private val context: Context, private val loanPayments: List
 
         fun bind(loanPayment: LoanPayment, position: Int) {
 
+            viewLineTop.visibility = View.GONE
+            viewLineBottom.visibility = View.GONE
+
 
             if (position == 0) {
                 // first element
@@ -54,6 +58,9 @@ class ResultAdapter(private val context: Context, private val loanPayments: List
             }
 //
             if (position == loanPayments.size - 1) {
+
+
+
                 viewLineTop.visibility = View.VISIBLE
                 viewLineBottom.visibility = View.GONE
 
