@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--the icon turns to green when the edit text is in focus-->
+    <item android:drawable="@drawable/background_input_forcus" android:state_focused="true" android:state_selected="true" />
+
+    <!--the icon turns to grey when the edit text is out of focus-->
+    <item android:drawable="@drawable/bg_input" android:state_focused="false" />
+</selector>
+

@@ -1,0 +1,116 @@
+<!-- res/layout/activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.picture.CropImageActivity">
+
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:background="#00FFFFFF"
+        android:id="@+id/layoutToolbar"
+        android:layout_alignParentTop="true"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_weight="1"
+            android:src="@drawable/ic_back"
+            android:layout_width="0dp"
+            android:layout_height="20dp"/>
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:fontFamily="@font/inter28pteemibold"
+                    android:gravity="center"
+                    android:text="Photo cutting"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+
+
+        <ImageView
+            android:id="@+id/ic_check"
+            android:layout_weight="1"
+            android:src="@drawable/ic_check"
+            android:layout_width="0dp"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+
+
+    <!--    <LinearLayout-->
+<!--        android:id="@+id/layoutToolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:paddingTop="10dp"-->
+<!--        android:paddingBottom="10dp">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ic_back"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:src="@drawable/ic_back" />-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="3"-->
+<!--            android:fontFamily="@font/inter28pteemibold"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Photo cutting"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold" />-->
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ic_check"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:src="@drawable/ic_check" />-->
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:id="@+id/underlineToolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_alignBottom="@+id/layoutToolbar"-->
+<!--        android:background="#2B818D9C" />-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutToolbar"
+        android:orientation="vertical">
+
+        <com.lyrebirdstudio.croppylib.cropview.CropView
+            android:id="@+id/croppedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/cropImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

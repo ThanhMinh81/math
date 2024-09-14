@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/last_modifi"
+        android:icon="@drawable/ic_list_up"
+        android:title="Last modified"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/name"
+        android:icon="@drawable/sort_alpha"
+        android:title="Name"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/size"
+        android:icon="@drawable/sort_size"
+        android:title="File size"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/none"
+        android:icon="@drawable/ic_none"
+        android:title="None"
+        app:showAsAction="ifRoom" />
+</menu>

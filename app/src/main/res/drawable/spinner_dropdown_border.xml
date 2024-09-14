@@ -1,0 +1,8 @@
+<!-- res/drawable/spinner_dropdown_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF"/> <!-- Background color for drop-down -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/title_tool"/> <!-- Border color -->
+    <corners android:radius="4dp"/> <!-- Rounded corners -->
+</shape>

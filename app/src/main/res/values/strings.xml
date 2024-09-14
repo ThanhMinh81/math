@@ -1,0 +1,163 @@
+<resources>
+    <string name="app_name">MathEasyApp</string>
+    <string name="txt_caculator">Tính toán</string>
+    <string name="txt_image_bottomnav">Hình ảnh</string>
+    <string name="txt_tool_bottomnav">Công cụ</string>
+    <string name="txt_pdf_bottomnav">PDF</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_calculator">Calculator</string>
+    <string name="txt_scan">Quét</string>
+    <string name="txt_draw">Vẽ</string>
+    <string name="txt_keyboards">Bàn</string>
+    <string name="multiply" translatable="false">×</string>
+
+
+    <!-- Numbers -->
+    <string name="zero" translatable="false">0</string>
+    <string name="one" translatable="false">1</string>
+    <string name="two" translatable="false">2</string>
+    <string name="three" translatable="false">3</string>
+    <string name="four" translatable="false">4</string>
+    <string name="five" translatable="false">5</string>
+    <string name="six" translatable="false">6</string>
+    <string name="seven" translatable="false">7</string>
+    <string name="eight" translatable="false">8</string>
+    <string name="nine" translatable="false">9</string>
+
+
+    <string name="sine" translatable="false">sin</string>
+    <string name="sineInv" translatable="false">sin⁻¹</string>
+    <string name="cosine" translatable="false">cos</string>
+    <string name="cosineInv" translatable="false">cos⁻¹</string>
+    <string name="tangent" translatable="false">tan</string>
+    <string name="tangentInv" translatable="false">tan⁻¹</string>
+    <string name="e" translatable="false">e</string>
+    <string name="naturalLogarithm" translatable="false">ln</string>
+    <string name="naturalLogarithmInv" translatable="false">e^</string>
+    <string name="logarithm" translatable="false">log</string>
+    <string name="logarithmInv" translatable="false">10^</string>
+
+    <string name="tanh" translatable="false">tan</string>
+    <string name="operatorO" translatable="false">tan</string>
+
+    <string name="sinhInv" translatable="false">sinh</string>
+    <string name="coshInv" translatable="false">cosh</string>
+    <string name="tanhInv" translatable="false">tanh</string>
+
+
+    <!-- Symbols -->
+    <string name="clear" translatable="false">AC</string>
+    <string name="dot" translatable="false">,</string>
+    <string name="leftParenthesis" translatable="false">(</string>
+    <string name="rightParenthesis" translatable="false">)</string>
+    <string name="parentheses" translatable="false">(‎ ‎ )</string>
+
+    <string name="percent" translatable="false">%</string>
+    <string name="divide" translatable="false">÷</string>
+    <string name="subtract" translatable="false">−</string>
+    <string name="add" translatable="false">+</string>
+    <string name="equals" translatable="false">=</string>
+
+    <string name="square" translatable="false">√</string>
+    <string name="squareInv" translatable="false">x²</string>
+    <string name="squareInvModuloVersion" translatable="false">#</string>
+    <string name="pi" translatable="false">π</string>
+    <string name="factorial" translatable="false">!</string>
+
+    <string name="degree" translatable="false">DEG</string>
+    <string name="radian" translatable="false">RAD</string>
+    <string name="invert" translatable="false">INV</string>
+    <string name="tv_from_unit_conver">Từ đơn vị</string>
+    <string name="tv_hint_search">Tìm kiếm</string>
+    <string name="txt_caculator_machine">Máy tính</string>
+    <string name="txt_unit">Đơn vị</string>
+    <string name="txt_money">Tiền tệ</string>
+
+    <string name="txt_from_unit">"Từ đơn vị"</string>
+    <string name="txt_to_unit">"Đến đơn vị"</string>
+    <string name="txt_e" translatable="false">e</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="sigma">Σ</string>
+    <string name="phi">Φ</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="txt_saving_title">Saving</string>
+    <string name="txt_edit">Edit data</string>
+    <string name="txt_see_result">See Result</string>
+    <string name="txt_title_price">Price</string>
+    <string name="txt_title_quantity">Quantity</string>
+    <string name="txt_unit_price">Unit Price</string>
+    <string name="txt_result">Result</string>
+
+
+    <string name="fixed_deposit">Fixed deposit</string>
+    <string name="installment_savings">Installment saving</string>
+    <string name="simple_interest">Simple interest</string>
+    <string name="monthly_compound">Monthly gross profit</string>
+    <string name="quarterly_compound">Quaterly gross profit</string>
+    <string name="semiannual_compound">Half-year gross profit</string>
+    <string name="annual_compound">Annual gross profit</string>
+    <string name="margin_level">Monthly installment rate</string>
+    <string name="goal_level">Target level</string>
+    <string name="year">Years</string>
+    <string name="month">Months</string>
+    <string name="txt_title_principal">Principal loan</string>
+    <string name="txt_repayment_method">Debt repayment method</string>
+    <string name="txt_value_currency">VND</string>
+    <string name="txt_value_ex">Ex : 9%</string>
+    <string name="txt_ex_currency">Ex : 10.000</string>
+
+
+    <string-array name="spinner_items">
+        <item>Equal total payment</item>
+        <item>The total amount paid is equal</item>
+        <item>Full payment</item>
+    </string-array>
+
+    <string-array name="spinner_borrow_time">
+        <item>Years</item>
+        <item>Month</item>
+    </string-array>
+
+
+</resources>

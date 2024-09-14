@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:context=".view.calculate.UnitConverFragment">
+
+    <HorizontalScrollView
+        android:id="@+id/tvCalculationContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="end"
+        android:scrollbars="horizontal">
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tvCalculation"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="right"-->
+        <!--            android:background="@null"-->
+        <!--            android:maxLines="1"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:textSize="22sp" />-->
+
+        <EditText
+            android:id="@+id/tvCalculation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@null"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/tvResult2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCalculationContainer"
+        android:scrollbars="horizontal">
+
+        <EditText
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@null"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textDirection="firstStrongLtr"
+            android:gravity="end"
+            android:textSize="22sp" />
+
+    </HorizontalScrollView>
+
+</LinearLayout>

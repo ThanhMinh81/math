@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:requestLegacyExternalStorage="true">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MathEasyApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".view.home.PictureActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.history.HistoryEmptyActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.intro.LanguageActivity"
+
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MathEasyApp">
+
+        </activity>
+        <activity
+            android:name=".view.intro.SplashScreen"
+
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".view.history.historyscan.HistoryCameraActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.home.ViewPDFActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.home.ResponseActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.picture.CropImageActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.picture.FolderActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.picture.PhotoCuttingActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tool.activity.UnitPriceActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tool.activity.SaveMoneyActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tool.activity.CostMaterialActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MathEasyApp" />
+        <activity
+            android:name=".view.tool.activity.TaxMoneyActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tool.activity.TipsActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.history.HistoryPaymentActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.tool.activity.ResultActivity"
+
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MathEasyApp" />
+        <activity
+            android:name=".view.tool.activity.BorrowActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MathEasyApp" />
+        <activity
+            android:name=".view.history.HistoryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.home.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

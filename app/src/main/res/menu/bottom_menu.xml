@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/caculator_bottomnav"
+        android:icon="@drawable/ic_calculator"
+        android:title="Calc" />
+
+    <item
+        android:id="@+id/image_bottomnav"
+        android:icon="@drawable/ic_photo"
+        android:title="Photo" />
+
+    <item
+        android:id="@+id/scanner_bottomnav"
+        android:icon="@drawable/ic_scan"
+        android:title="Scan" />
+
+    <item
+        android:id="@+id/pdf_bottomnav"
+        android:icon="@drawable/ic_pdf"
+        android:title="PDF" />
+
+    <item
+        android:id="@+id/tools_bottomnav"
+        android:icon="@drawable/ic_tool"
+        android:title="Tools" />
+
+</menu>
